@@ -1,0 +1,40 @@
+<ul class="ads_nav list-unstyled">
+    <h4>特别感谢</h4>
+    {#125 x 125#}
+    <li><a href="https://www.verycloud.cn/" target="_blank"><img src="/static/blog/img/verycloud_logo.png" alt=""> </a></li>
+{#    <li><a href="#"><img src="" alt=""> </a></li>#}
+{#    <li><a href="#"><img src="" alt=""> </a></li>#}
+{#    <li><a href="#"><img src="" alt=""> </a></li>#}
+{#    css --> .ads_nav li a img#}
+    <div class="clearfix"></div>
+</ul>
+
+<form class="form-inline" method="get" action="/?search=search">
+<input type="text" class="form-control input-lg btn-block" name="search" placeholder="标题->简介->内容">
+<button type="submit" class="btn btn-success btn-lg">搜索</button>
+</form>
+
+<ul class="tag_nav list-unstyled">
+    <h4>分类</h4>
+    <div class="list-group">
+        {% for category in category_list %}
+            <li class="active"><a href="{% url 'blog:category' category.pk %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </div>
+    <div class="clearfix"></div>
+    <h4>标签</h4>
+    <div class="list-group">
+        {% for tag in tag_list %}
+            <li class="active"><a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a></li>
+        {% endfor %}
+    </div>
+    <div class="clearfix"></div>
+    <h4>文章归档：</h4>
+    <div class="list-group">
+        {% for year,months in date_archive %}
+            {% for month in months %}
+                <li class="active"><a href="{% url 'blog:archive' year month %}">{{ year }}-{{ month }}</a></li>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</ul>

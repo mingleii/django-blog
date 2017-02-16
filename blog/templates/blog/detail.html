@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="blog"><!-- start main -->
+	<div class="container">
+		<div class="main row">
+            <div class="col-md-8">
+                <h2 class="style">{{ article.title }}</h2>
+                <div class="blog_list pull-left">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-calendar-o"></i><span>{{ article.utime|date:"Y年n月d日" }}</span></li>
+                        <li><i class="fa fa-user"></i><span>{{ article.author.username|default:'admin' }}</span></li>
+                        <li><i class="fa fa-eye"></i><span>{{  article.views }}</span></li>
+                    </ul>
+                </div>
+                <div class="b_left pull-right">
+                    <a href="{% url 'blog:like' article.pk %}"><i class="fa fa-heart"></i><span> {{ article.likes }} </span></a>
+                </div>
+                <div class="clearfix"></div>
+                {% if article.picture %}
+                <div class="details row">
+                    <div class="col-md-4">
+                        <img src="{{ article.get_picture_url }}" alt="" class="img-responsive"/>
+                    </div>
+                    <div class="col-md-4">
+                        <p>{{ article.abstract }}</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                {% endif %}
+                <p class="para">{{ article.content |safe }}</p>
+                {% include 'blog/duoshuo.html' %}
+            </div>
+            <div class="col-md-4 blog_right">
+                {% include 'blog/sidebar.html' %}
+            </div>
+		</div>
+	</div>
+</div><!-- end main -->
+            
+{% endblock %}

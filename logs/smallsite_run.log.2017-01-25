@@ -1,0 +1,13 @@
+{"levelname": "INFO", "asctime": "2017-01-25 10:16:37,612", "process": 14444, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:16:41,211", "process": 19840, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:16:45,339", "process": 8580, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:16:50,364", "process": 4080, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:23:06,602", "process": 6092, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:24:28,499", "process": 8080, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:29:18,084", "process": 9636, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:41:55,468", "process": 11196, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 10:47:27,045", "process": 4212, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 11:29:20,252", "process": 2724, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 11:36:41,026", "process": 22044, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 11:38:01,679", "process": 24960, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-25 11:42:44,142", "process": 4596, "message": "refresh_config_redis_success"}

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html lang="zh-CN">
+    <head>
+        <meta name="google-site-verification" content="iLdmMqKQg0aRk4u3bmQUnHk_DoaelMwN4v4ahCi4iO4" />
+        <title>Small Site</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="minglei.weng">
+        <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+{#        <link rel="stylesheet" href="{% static 'blog/css/pygments/github.css' %}">#}
+        <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+        <link rel="icon" href="{% static 'blog/img/favicon.ico' %}" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- start plugins -->
+        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+            <script>
+                $(function() {
+                    var pull 		= $('#pull');
+                        menu 		= $('nav ul');
+                        menuHeight	= menu.height();
+                    $(pull).on('click', function(e) {
+                        e.preventDefault();
+                        menu.slideToggle();
+                    });
+                    $(window).resize(function(){
+                        var w = $(window).width();
+                        if(w > 320 && menu.is(':hidden')) {
+                            menu.removeAttr('style');
+                        }
+                    });
+                });
+            </script>
+        <!----font-Awesome----->
+            <link rel="stylesheet" href="{% static 'blog/fonts/css/font-awesome.min.css' %}" />
+        <!----font-Awesome----->
+    </head>
+    <body>
+        <div class="header_bg" id="home"><!-- start header -->
+            <div class="container">
+                <div class="row header text-center specials">
+                    <div class="h_logo">
+                        <a href="/"><img src="{% static 'blog/img/logo.png' %}" alt="" class="responsive"/></a>
+                    </div>
+                    <nav class="top-nav">
+                        <ul class="top-nav nav_list">
+                            <li><a href="/">首页</a></li>
+                            <li class="page-scroll"><a href="#about">关于</a></li>
+                            <li class="logo page-scroll"><a href="/"><img src="{% static 'blog/img/logo.png' %}" alt="" class="responsive"/></a></li>
+                            <li class="page-scroll"><a href="/">博客</a></li>
+                            <li class="page-scroll"><a href="#contact">联系</a></li>
+                        </ul>
+                        <a href="#" id="pull"><img src="{% static 'blog/img/nav-icon.png' %}" title="menu" /></a>
+                    </nav>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--block start -->
+        {% block content %}{% endblock %}
+        <!--block end -->
+        <div class="footer1_bg"><!-- start footer1 -->
+            <div class="container">
+                <div class="row  footer">
+                    <div class="copy text-center">
+                        <p class="link" id="about"><span>Copyright &copy; 2016&nbsp;&nbsp;<a target="_blank" href="http://www.miitbeian.gov.cn">辽ICP备16010721号</a></span></p>
+                        <p class="link" id="contact"><span>Email&nbsp;:&nbsp;<a target="_blank" href="mailto:minglei.weng@smallsite.cn">minglei.weng@smallsite.cn</a></span></p>
+                        <a href="#home" id="toTop" style="display: block;") no-repeat center;"><span id="toTopHover" style="opacity: 1;"> </span></a>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                        $(function() {
+                          $('a[href*=#]:not([href=#])').click(function() {
+                            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+                              var target = $(this.hash);
+                              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                              if (target.length) {
+                                $('html,body').animate({
+                                  scrollTop: target.offset().top
+                                }, 1000);
+                                return false;
+                              }
+                            }
+                          });
+                        });
+                </script>
+                <!---- start-smoth-scrolling---->
+            </div>
+        </div>
+    </body>
+</html>

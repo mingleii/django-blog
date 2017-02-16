@@ -1,0 +1,5 @@
+{"levelname": "INFO", "asctime": "2017-01-11 10:46:53,157", "process": 20860, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-11 10:46:57,503", "process": 21336, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-11 11:06:04,064", "process": 21928, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-11 11:06:13,454", "process": 22112, "message": "refresh_config_redis_success"}
+{"levelname": "INFO", "asctime": "2017-01-11 11:45:31,677", "process": 5748, "message": "refresh_config_redis_success"}
